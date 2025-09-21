@@ -2,14 +2,18 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "../pages/Dashboard";
 import MessagePage from "../pages/MessagePage";
-import Layout from "../layout/layout"
+import Layout from "../layout/layout";
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />} >
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/messages" element={<MessagePage />} />
+        {/* Layout wrapper */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Dashboard />} />  {/* default route */}
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="messages" element={<MessagePage />} />
+          {/* Removed /profilepanel route since it is now inside MessagePage */}
         </Route>
       </Routes>
     </BrowserRouter>

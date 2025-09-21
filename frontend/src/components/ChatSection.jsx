@@ -18,7 +18,7 @@ const dummyMessagesMap = {
   ],
 };
 
-const ChatSection = ({ selectedFriend }) => {
+const ChatSection = ({ selectedFriend, onAvatarClick }) => {
   const userId = "user1";
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -54,7 +54,7 @@ const ChatSection = ({ selectedFriend }) => {
       {/* Header */}
       {selectedFriend && (
         <div className="px-6 py-4 flex items-center justify-between bg-white shadow-md rounded-t-3xl">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 cursor-pointer" onClick={onAvatarClick}>
             <div className="w-10 h-10 rounded-full bg-gray-500 flex items-center justify-center text-white font-bold">
               {selectedFriend.name.charAt(0)}
             </div>
@@ -126,7 +126,7 @@ const ChatSection = ({ selectedFriend }) => {
           </div>
           <button
             onClick={handleSend}
-            className="p-3 text-white bg-[#08CB00] rounded-full hover:bg-[#187809] transition duration-200"
+            className="p-3 text-white bg-[#08CB00] rounded-full hover:bg-green-600 transition duration-200"
           >
             <PiPaperPlaneRightFill className="text-xl" />
           </button>
