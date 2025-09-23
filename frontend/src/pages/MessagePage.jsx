@@ -47,7 +47,7 @@ const MessagePage = () => {
 
       {/* Profile panel (conditionally visible) */}
     {showProfile && selectedFriend && (
-  <div className="absolute right-[300px] top-0 w-[300px] h-full z-20 shadow-lg bg-white">
+  <div className="absolute right-[800px] top-19 w-[300px] h-auto rounded-2xl z-20 shadow-lg bg-white ">
     <ProfilePanel friend={selectedFriend} onClose={() => setShowProfile(false)} />
   </div>
 )}

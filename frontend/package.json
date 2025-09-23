@@ -13,6 +13,7 @@
     "@fortawesome/fontawesome-svg-core": "^7.0.1",
     "@fortawesome/free-solid-svg-icons": "^7.0.1",
     "@fortawesome/react-fontawesome": "^3.0.2",
+    "@headlessui/react": "^2.2.8",
     "@tailwindcss/vite": "^4.1.13",
     "fortawesome": "^0.0.1-security",
     "react": "^19.1.1",
